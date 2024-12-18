@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = "rhxpchispi/myapp:dev"
-        EC2_PUBLIC_IP = "<IP_PUBLICA_DE_TU_INSTANCIA>"
+        EC2_PUBLIC_IP = "107.20.26.223"
         SSH_KEY = "./terraform-ec2-key" // Ruta de la llave SSH en el repositorio
         DOCKER_CONTAINER_NAME = "myapp-en-aws" // Nombre del contenedor que se va a desplegar
     }
