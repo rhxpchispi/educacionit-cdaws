@@ -26,7 +26,7 @@ pipeline {
                         docker rm ${DOCKER_CONTAINER_NAME} || true
 
                         echo "===> Desplegando el contenedor"
-                        docker run -d ${DOCKER_IMAGE}
+                        docker run ${DOCKER_IMAGE}
                     EOF
                     """
                 }
