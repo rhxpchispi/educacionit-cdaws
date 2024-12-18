@@ -14,8 +14,8 @@ pipeline {
                 script {
                     // Conexión SSH para desplegar el contenedor
                     sh """
-                    chmod 400 terraform-ec2-key
-                    ssh -i ${SSH_KEY} -o StrictHostKeyChecking=no ubuntu@${EC2_PUBLIC_IP} << EOF
+                    chmod 400 terraform-ec2-key << EOF
+                    ssh -i ${SSH_KEY} -o StrictHostKeyChecking=no ubuntu@${EC2_PUBLIC_IP} 
                         set -e
                         
                         echo "===> Tirando la última versión de la imagen: ${DOCKER_IMAGE}"
